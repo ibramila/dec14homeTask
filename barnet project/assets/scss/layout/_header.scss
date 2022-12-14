@@ -1,0 +1,118 @@
+header {
+    width: 100%;
+
+    .header_top {
+        width: 100%;
+        position: relative;
+        font-size: 13px;
+        padding: 11px 0px;
+        background: #3648b2;
+
+        span {
+            color: white;
+        }
+
+        i {
+            color: #ff4747;
+            margin-right: 6px;
+        }
+
+        a {
+            color: white;
+        }
+
+        .row {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-left {
+            width: 20%;
+
+            .social-links {
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+
+        .top-right {
+            width: 30%;
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+
+
+            }
+
+            li:nth-child(1) {
+                display: inline;
+            }
+        }
+    }
+
+    .header_upper {
+        padding: 20px 0;
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                width: 20%;
+            }
+
+            .menu {
+                display: flex;
+                width: 80%;
+
+                nav {
+                    display: flex;
+                    align-items: center;
+                }
+
+                &_main {
+                    width: 63%;
+
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+
+                        li {
+                            font-weight: 600;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+                &_right-side {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 20%;
+
+                    &-search {
+                        &-box-btn {
+                            color: black;
+                            background-color: white;
+                        }
+
+                    }
+
+                    .btn1 {
+                        background-color: #ff4747;
+                        text-transform: capitalize;
+                        font-family: 'Rubik', sans-serif;
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 8px 30px;
+                        border-radius: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
