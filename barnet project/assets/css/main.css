@@ -393,29 +393,63 @@ header .header_upper .row .menu_right-side .btn1 {
 
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
+  z-index: 2;
   padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/ opacity */
+}
+.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.modal .close:hover, .modal .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal .modal-content {
+  margin: auto;
+  display: block;
+  width: 60%;
+  max-width: 700px;
 }
 
-main {
-  height: 300vh;
+.modal-content {
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.spinner-grow {
+  display: none;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: #03112e;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .hero-section {
@@ -441,7 +475,7 @@ main {
 .hero-section .outer-box h1 {
   position: absolute;
   color: white;
-  z-index: 9999;
+  z-index: 1;
 }
 .hero-section .outer-box ul {
   position: absolute;
@@ -498,9 +532,10 @@ main {
   display: flex;
 }
 .second-section .product-info-add .countNum .countNumber {
-  border: 1px solid black;
-  padding: 0 10px;
+  border: 1px solid lightgray;
+  padding: 13px 10px;
   text-align: center;
+  border-radius: 22px;
 }
 .second-section .product-info-add .countNum .inc-dec {
   display: flex;
@@ -508,13 +543,19 @@ main {
 }
 .second-section .product-info-add .countNum .inc-dec .increase {
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid lightgray;
+  border-radius: 40%;
+  background-color: grey;
   padding: 0 10px;
+  color: white;
 }
 .second-section .product-info-add .countNum .inc-dec .decrease {
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid lightgray;
+  border-radius: 40%;
+  background-color: grey;
   padding: 0 10px;
+  color: white;
 }
 .second-section .product-info-add .add-btn {
   font-size: 15px;
@@ -536,11 +577,11 @@ main {
   display: inline;
 }
 
-.third-section .des-rew-buttons {
+.third-section .row .des-rew-buttons {
   display: flex;
   gap: 30px;
 }
-.third-section .description {
+.third-section .row .des-rew-buttons .nav-link {
   border: 2px solid #f2f2f2;
   border-radius: 25px;
   padding: 14px 30px;
@@ -548,15 +589,202 @@ main {
   color: black;
   font-weight: 500;
 }
-.third-section .reviews {
-  border: 2px solid #f2f2f2;
-  border-radius: 25px;
-  padding: 14px 30px;
-  background-color: white;
-  color: black;
-  font-weight: 500;
+.third-section .row .des-rew-buttons .active {
+  background: #ff4747;
+  color: #fff;
+  border-color: #ff4747;
 }
-.third-section hr {
-  margin-top: 30px;
+.third-section .row hr {
+  margin: 30px 0;
   color: lightgrey;
+}
+.third-section .row .description-content .tab-pane {
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  display: none;
+}
+.third-section .row .description-content .tab-pane .content .title-box {
+  padding: 30px 0;
+}
+.third-section .row .description-content .tab-pane .content .title-box h3 {
+  font-weight: normal;
+  line-height: 1.6em;
+  color: #1a224d;
+}
+.third-section .row .description-content .tab-pane .content .text {
+  font-size: 15px;
+  color: #808080;
+}
+.third-section .row .description-content .tab-pane .content .text p {
+  line-height: 1.8em;
+}
+.third-section .row .description-content .tab-pane .comment-box {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 40px;
+}
+.third-section .row .description-content .tab-pane .comment-box .comment {
+  display: flex;
+  gap: 30px;
+}
+.third-section .row .description-content .tab-pane .comment-box .comment .comment-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.third-section .row .description-content .tab-pane .comment-box .comment .comment-inner-info {
+  color: #222222;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3em;
+}
+.third-section .row .description-content .tab-pane .comment-box .comment .comment-inner-info span {
+  color: #ff4747;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+}
+.third-section .row .description-content .tab-pane .comment-box .comment .comment-inner-text {
+  color: #7e8597;
+  font-size: 15px;
+  line-height: 1.8em;
+  margin-top: 10px;
+}
+.third-section .row .description-content .tab-pane .comment-form {
+  padding-top: 45px;
+}
+.third-section .row .description-content .tab-pane .comment-form h2 {
+  color: #222222;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.third-section .row .description-content .tab-pane .comment-form p {
+  color: #7e8597;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+.third-section .row .description-content .tab-pane .comment-form .row .sec1 {
+  margin-bottom: 15px;
+}
+.third-section .row .description-content .tab-pane .comment-form .row label {
+  color: #222222;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.third-section .row .description-content .tab-pane .comment-form .row input {
+  display: block;
+  width: 100%;
+  line-height: 28px;
+  padding: 10px 15px;
+  border: 1px solid #efefef;
+  height: 50px;
+  color: #848484;
+  font-weight: 300;
+  background: #ffffff;
+  transition: all 300ms ease;
+}
+.third-section .row .description-content .tab-pane .comment-form .row input:focus {
+  border-color: #ff4747;
+}
+.third-section .row .description-content .tab-pane .comment-form .row textarea {
+  display: block;
+  width: 100%;
+  line-height: 26px;
+  padding: 10px 15px;
+  color: #848484;
+  border: 1px solid #efefef;
+  height: 175px;
+  font-weight: 400;
+  background: #ffffff;
+  resize: none;
+  transition: all 300ms ease;
+}
+.third-section .row .description-content .tab-pane .comment-form .row textarea:focus {
+  border-color: #ff4747;
+}
+.third-section .row .description-content .tab-pane .comment-form .row button {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 30px;
+  color: #ffffff;
+  padding: 12px 42px;
+  font-weight: 700;
+  overflow: hidden;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  background-color: #ff4747;
+  text-transform: capitalize;
+}
+@-webkit-keyframes example {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@keyframes example {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+.third-section .row .description-content .active {
+  display: block;
+}
+
+.fifth-section .container {
+  position: relative;
+  background-color: #ff4747;
+  padding: 40px 50px 26px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -80px;
+}
+.fifth-section .container .row h2 {
+  font-size: 30px;
+  line-height: 1.2em;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+.fifth-section .container .row input {
+  display: inline-block;
+  width: 100%;
+  line-height: 40px;
+  padding: 10px 50px 10px 30px;
+  height: 60px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 2px solid #ff6c6c;
+  background: #ff6c6c;
+  transition: all 300ms ease;
+  width: calc(100% - 223px);
+}
+.fifth-section .container .row button {
+  padding: 16px 40px;
+  line-height: 24px;
+  color: #222;
+  text-align: center;
+  border-radius: 30px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  background: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  transition: 1s;
+}
+.fifth-section .container .row button:hover, .fifth-section .container .row button:focus {
+  background-color: black;
+  border: none;
+  color: white;
 }/*# sourceMappingURL=main.css.map */

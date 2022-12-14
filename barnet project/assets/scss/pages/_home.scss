@@ -1,10 +1,9 @@
 main {
-    height: 300vh;
+    // h/eight: 300vh;
 }
 
 .hero-section {
     background-image: url("http://html.commonsupport.xyz/2019/Barnet/images/background/3.jpg");
-    // width: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -29,7 +28,7 @@ main {
         h1 {
             position: absolute;
             color: white;
-            z-index: 9999;
+            z-index: 1;
         }
 
         ul {
@@ -59,9 +58,8 @@ main {
         cursor: pointer;
 
         &:hover {
-            filter:brightness(50%) ;
+            filter: brightness(50%);
         }
-
     }
 
     .product-info {
@@ -102,9 +100,10 @@ main {
                 display: flex;
 
                 .countNumber {
-                    border: 1px solid black;
-                    padding: 0 10px;
+                    border: 1px solid lightgray;
+                    padding: 13px 10px;
                     text-align: center;
+                    border-radius: 22px;
                 }
 
                 .inc-dec {
@@ -113,19 +112,23 @@ main {
 
                     .increase {
                         cursor: pointer;
-                        border: 1px solid black;
+                        border: 1px solid lightgray;
+                        border-radius: 40%;
+                        background-color: grey;
                         padding: 0 10px;
+                        color: white;
                     }
 
                     .decrease {
                         cursor: pointer;
-
-                        border: 1px solid black;
+                        border: 1px solid lightgray;
+                        border-radius: 40%;
+                        background-color: grey;
                         padding: 0 10px;
+                        color: white;
                     }
                 }
             }
-
 
             .add-btn {
                 font-size: 15px;
@@ -153,33 +156,253 @@ main {
 }
 
 .third-section {
-    .des-rew-buttons {
-        display: flex;
-        gap: 30px;
+    .row {
+        .des-rew-buttons {
+            display: flex;
+            gap: 30px;
 
+            .nav-link {
+                border: 2px solid #f2f2f2;
+                border-radius: 25px;
+                padding: 14px 30px;
+                background-color: white;
+                color: black;
+                font-weight: 500;
+            }
+
+            .active {
+                background: #ff4747;
+                color: #fff;
+                border-color: #ff4747;
+            }
+        }
+
+        hr {
+            margin: 30px 0;
+            color: lightgrey;
+        }
+
+        .description-content {
+            .tab-pane {
+                animation-name: example;
+                animation-duration: 3s;
+                display: none;
+
+                .content {
+                    .title-box {
+                        padding: 30px 0;
+
+                        h3 {
+                            font-weight: normal;
+                            line-height: 1.6em;
+                            color: #1a224d;
+                        }
+                    }
+
+                    .text {
+                        font-size: 15px;
+                        color: #808080;
+
+                        p {
+                            line-height: 1.8em;
+
+                        }
+                    }
+                }
+
+                .comment-box {
+                    border-bottom: 1px solid #e2e8f0;
+                    padding-bottom: 40px;
+
+                    .comment {
+                        display: flex;
+                        gap: 30px;
+
+                        .comment-inner {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            &-info {
+                                color: #222222;
+                                font-size: 20px;
+                                font-weight: 700;
+                                line-height: 1.3em;
+
+                                span {
+                                    color: #ff4747;
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                    font-family: 'Rubik', sans-serif;
+                                }
+                            }
+
+                            &-text {
+                                color: #7e8597;
+                                font-size: 15px;
+                                line-height: 1.8em;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+
+                .comment-form {
+                    padding-top: 45px;
+
+                    h2 {
+                        color: #222222;
+                        font-size: 24px;
+                        font-weight: 700;
+                        margin-bottom: 12px;
+                    }
+
+                    p {
+                        color: #7e8597;
+                        font-size: 15px;
+                        font-weight: 400;
+                        margin-bottom: 22px;
+                    }
+
+                    .row {
+                        .sec1 {
+                            margin-bottom: 15px;
+                        }
+
+                        label {
+                            color: #222222;
+                            font-size: 18px;
+                            font-weight: 400;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        input {
+                            // position: relative;
+                            display: block;
+                            width: 100%;
+                            line-height: 28px;
+                            padding: 10px 15px;
+                            border: 1px solid #efefef;
+                            height: 50px;
+                            color: #848484;
+                            font-weight: 300;
+                            background: #ffffff;
+                            transition: all 300ms ease;
+
+                            &:focus {
+                                border-color: #ff4747;
+                            }
+                        }
+
+                        textarea {
+                            display: block;
+                            width: 100%;
+                            line-height: 26px;
+                            padding: 10px 15px;
+                            color: #848484;
+                            border: 1px solid #efefef;
+                            height: 175px;
+                            font-weight: 400;
+                            background: #ffffff;
+                            resize: none;
+                            transition: all 300ms ease;
+
+                            &:focus {
+                                border-color: #ff4747;
+                            }
+                        }
+
+                        button {
+                            display: inline-block;
+                            font-size: 15px;
+                            line-height: 30px;
+                            color: #ffffff;
+                            padding: 12px 42px;
+                            font-weight: 700;
+                            overflow: hidden;
+                            border-radius: 50px;
+                            letter-spacing: 1px;
+                            margin-top: 20px;
+                            background-color: #ff4747;
+                            text-transform: capitalize;
+                        }
+                    }
+
+                }
+
+            }
+
+            @keyframes example {
+                0% {
+                    bottom: -100px;
+                }
+
+                100% {
+                    bottom: 0px;
+                }
+            }
+
+            .active {
+                display: block;
+            }
+        }
     }
+}
 
-    .description {
-        border: 2px solid #f2f2f2;
-        border-radius: 25px;
-        padding: 14px 30px;
-        background-color: white;
-        color: black;
-        font-weight: 500;
+.fifth-section {
+    .container {
+        position: relative;
+        background-color: #ff4747;
+        padding: 40px 50px 26px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: -80px;
+
+        .row {
+            h2 {
+                font-size: 30px;
+                line-height: 1.2em;
+                color: #ffffff;
+                font-weight: 700;
+                margin-bottom: 7px;
+            }
+
+            input {
+                display: inline-block;
+                width: 100%;
+                line-height: 40px;
+                padding: 10px 50px 10px 30px;
+                height: 60px;
+                font-size: 16px;
+                border-radius: 30px;
+                border: 2px solid #ff6c6c;
+                background: #ff6c6c;
+                transition: all 300ms ease;
+                width: calc(100% - 223px);
+            }
+
+            button {
+                padding: 16px 40px;
+                line-height: 24px;
+                color: #222;
+                text-align: center;
+                border-radius: 30px;
+                display: inline-block;
+                font-size: 15px;
+                font-weight: 500;
+                background: #fff;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                border: none;
+                transition: 1s;
+
+                &:hover,
+                &:focus {
+                    background-color: black;
+                    border: none;
+                    color: white;
+                }
+            }
+        }
     }
-
-    .reviews {
-        border: 2px solid #f2f2f2;
-        border-radius: 25px;
-        padding: 14px 30px;
-        background-color: white;
-        color: black;
-        font-weight: 500;
-    }
-
-    hr {
-        margin-top: 30px;
-        color: lightgrey;
-    }
-
 }
