@@ -1,7 +1,5 @@
 const ul = document.querySelector(".navigation");
 
-
-
 fetch('https://fakestoreapi.com/products/categories')
     .then(res => res.json())
     .then(json => {
@@ -13,6 +11,3 @@ fetch('https://fakestoreapi.com/products/categories')
             ul.appendChild(li);
         })
     })
-
-
-    

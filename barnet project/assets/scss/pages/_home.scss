@@ -1,7 +1,3 @@
-main {
-    // h/eight: 300vh;
-}
-
 .hero-section {
     background-image: url("http://html.commonsupport.xyz/2019/Barnet/images/background/3.jpg");
     background-size: cover;
@@ -150,6 +146,33 @@ main {
 
             li {
                 display: inline;
+            }
+        }
+
+        &-share {
+            ul {
+                display: flex;
+                gap: 20px;
+
+                li {
+                    border: 1px solid lightgray;
+                    border-radius: 50%;
+                    padding: 5px 10px;
+
+                    span {
+                        color: grey;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        border: 1px solid #ff4747;
+                        background-color: #ff4747;
+
+                        span {
+                            color: white;
+                        }
+                    }
+                }
             }
         }
     }
@@ -327,18 +350,6 @@ main {
                             text-transform: capitalize;
                         }
                     }
-
-                }
-
-            }
-
-            @keyframes example {
-                0% {
-                    bottom: -100px;
-                }
-
-                100% {
-                    bottom: 0px;
                 }
             }
 
@@ -401,6 +412,66 @@ main {
                     background-color: black;
                     border: none;
                     color: white;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 576px) {
+    .hero-section {
+        .outer-box {}
+    }
+
+
+    .second-section {
+        padding: 100px 0px 60px;
+
+        .row {
+            gap: 30px;
+
+            .product-img {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .product-info {
+                &-category {
+                    padding-left: 0;
+                }
+
+                &-share {
+                    ul {
+                        display: flex;
+                        gap: 20px;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .third-section {
+        .row {
+            .des-rew-buttons {
+                gap: 10px;
+            }
+        }
+    }
+
+    .fifth-section {
+        margin: 0 15px;
+
+        .container {
+            .row {
+                flex-direction: column;
+                gap: 15px;
+
+                h2 {
+                    margin-bottom: 7px;
+                    font-family: 'Rubik', sans-serif;
                 }
             }
         }

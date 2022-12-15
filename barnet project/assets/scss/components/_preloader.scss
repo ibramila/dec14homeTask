@@ -1,12 +1,17 @@
-.spinner-grow {
-    display: none;
-    position: fixed;
-    left: 0px;
-    top: 0px;
+body {
+    overflow: hidden;
+}
+
+.pre__loader {
+    z-index: 1000;
     width: 100%;
-    height: 100%;
-    z-index: 999999;
+    height: 100vh;
+    position: relative;
     background-color: #03112e;
-    background-position: center center;
-    background-repeat: no-repeat;
+
+    div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
 }

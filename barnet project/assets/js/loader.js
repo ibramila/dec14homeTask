@@ -1,8 +1,6 @@
-const loader = document.querySelector(".spinner-grow");
-
-window.addEventListener("load", () => {
-    loader.style.display = "block";
-});
-window.addEventListener('unload', () => {
-    loader.style.display = "none";
-});
+window.addEventListener("load", ()=>{
+    setTimeout(() => {
+        document.querySelector(".pre__loader").style.display="none"
+        document.body.style.overflow="auto";
+    }, 3000);
+})

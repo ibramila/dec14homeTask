@@ -1,5 +1,5 @@
-let btnActive = document.querySelectorAll(".nav-link");
-let contents = document.querySelectorAll(".tab-pane");
+const btnActive = document.querySelectorAll(".nav-link");
+const contents = document.querySelectorAll(".tab-pane");
 
 btnActive.forEach((tab, index) => {
     tab.addEventListener("click", () => {

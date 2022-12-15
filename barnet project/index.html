@@ -15,8 +15,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/main.css">
-    <!--  boxicon-->
-    <link href='https://unpkg.com/boxicon@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- boootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -28,33 +26,36 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Rubik:ital,wght@0,400;0,500;0,600;1,600&display=swap"
         rel="stylesheet">
-    <!-- aos animation -->
-    <!-- <link rel="stylesheet" href="bower_components/aos/dist/aos.css">
 
-    <script src="bower_components/aos/dist/aos.js" defer>
-        AOS.init(); -->
-    </script>
+    <!-- aos link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Barret</title>
 </head>
 
 <body>
-    <!-- header -->
-    <header class="header">
-        <!-- <div class="spinner-grow" role="status">
-            <span class="sr-only">Loading...</span>
-        </div> -->
-        <!-- header topumuz  -->
+    <!-- //! Header  -->
 
+    <header class="header">
+        <!-- //! LOADER  -->
+
+        <div class="pre__loader">
+            <div class="spinner-grow text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <!-- //! header top section  -->
         <div class="header_top">
             <div class="container">
                 <div class="row">
                     <div class="top-left">
                         <div class="social-links">
-                            <a href="#"><i class='bx bx-user'></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-pinterest"></i></a>
-                            <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                            <a href="#"><span class="fab fa-facebook-f"></span></a>
+                            <a href="#"><span class="fab fa-twitter"></span></a>
+                            <a href="#"><span class="fab fa-linkedin-in"></span></a>
+                            <a href="#"><span class="fab fa-pinterest"></span></a>
+                            <a href="#"><span class="fab fa-vimeo-v"></span></a>
                         </div>
                     </div>
                     <div class="top-right">
@@ -68,7 +69,7 @@
             </div>
         </div>
 
-        <!-- header upperimiz -->
+        <!-- //! header upper section  -->
 
         <div class="header_upper">
             <div class="container">
@@ -100,6 +101,8 @@
     </header>
 
     <main>
+        <!-- //! hero section  -->
+
         <section class="hero-section">
             <div class="container">
                 <div class="outer-box">
@@ -110,8 +113,8 @@
                     </ul>
                 </div>
             </div>
-
         </section>
+        <!-- //! second section  -->
 
         <section class="second-section">
             <div class="container">
@@ -148,16 +151,17 @@
                         </ul>
                         <div class="product-info-share">
                             <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                                <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fab fa-google"></span></a></li>
+                                <li><a href="#"><span class="fab fa-skype"></span></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- //! third section  -->
 
         <section class="third-section">
             <div class="container">
@@ -289,17 +293,27 @@
                 </div>
             </div>
         </section>
+        <!-- //! forth section  -->
 
-        <section class="forth-section"></section>
+        <section class="forth-section">
+            <div class="container">
+                <div class="sec-title">
+                    <h1>Raleted Products</h1>
+                </div>
+            </div>
+
+        </section>
+        
+        <!-- //! fifth section  -->
 
         <section class="fifth-section">
             <div class="container">
                 <div class="box-subscribe">
                     <div class="row">
-                        <div class="title-sub col-lg-6">
+                        <div class="title-sub col-lg-6 col-xs-12">
                             <h2>Subscribe <br>to Our Newsletter</h2>
                         </div>
-                        <div class="subscribe col-lg-6">
+                        <div class="subscribe col-lg-6 col-xs-12">
                             <form method="post" action="contact.html">
                                 <div class="form-group">
                                     <input type="email" name="email" value="" placeholder="Your email..." required="">
@@ -312,7 +326,127 @@
             </div>
         </section>
     </main>
-    <footer class="footer-upper">
+    <footer class="main-footer">
+        <div class="footer-upper">
+            <!--Widgets Section-->
+            <div class="container">
+                <div class="widget-section">
+                    <div class="row">
+                        <!--Footer Column-->
+                        <div class="footer-column col-lg-3 col-md-6 col-xs-12">
+                            <div class="footer-widget info-widget">
+                                <div class="footer-logo">
+                                    <img src="	http://html.commonsupport.xyz/2019/Barnet/images/footer-logo.png"
+                                        alt="logo"></a>
+                                </div>
+                                <div class="widget-content">
+                                    <div class="text">
+                                        <p>Lorem ipsum dolor amet consecte adipisicing elit sed eiusm tempor incididunt
+                                            ut
+                                            labore dolore magna aliqua enim ad minim veniam. quis nostrud exercitation
+                                            ullam
+                                        </p>
+                                        <p>Duis aute irure dolor in reprehend it in voluptate velit cillum.dolore eu
+                                            fugiat
+                                            nulla.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End column -->
+
+                        <!--Footer Column-->
+                        <div class="footer-column col-lg-3 col-md-6 col-xs-12">
+                            <div class="footer-widget twitter-widget">
+                                <h4 class="widget-title">Twitter Feeds</h4>
+                                <div class="widget-content">
+                                    <article class="post">
+                                        <div class="top-info">
+                                            <span class="icon fab fa-twitter"></span>
+                                            <div class="info">
+                                                <div class="author">Kirstin Hagel</div>
+                                                <div class="author-meta">@KirstinHagel . 7 Dec</div>
+
+                                            </div>
+                                        </div>
+                                        <div class="text">Excepteur sint occaecat cupidatat proent. <a
+                                                href="#">https://T.Co/Sr45bvMJU6</a></div>
+                                    </article>
+
+                                    <article class="post">
+                                        <div class="top-info">
+                                            <span class="icon fab fa-twitter"></span>
+                                            <div class="info">
+                                                <div class="author">Kirstin Hagel</div>
+                                                <div class="author-meta">@KirstinHagel . 7 Dec</div>
+                                            </div>
+                                        </div>
+                                        <div class="text">Excepteur sint occaecat cupidatat proent. <a
+                                                href="#">https://T.Co/Sr45bvMJU6</a></div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End column -->
+                        <!--Footer Column-->
+                        <div class="footer-column col-lg-3 col-md-6 col-xs-12">
+                            <div class="footer-widget info-widget">
+                                <div class="footer-logo">
+                                    <img src="	http://html.commonsupport.xyz/2019/Barnet/images/footer-logo.png"
+                                        alt="logo"></a>
+                                </div>
+                                <div class="widget-content">
+                                    <div class="text">
+                                        <p>Lorem ipsum dolor amet consecte adipisicing elit sed eiusm tempor incididunt
+                                            ut
+                                            labore dolore magna aliqua enim ad minim veniam. quis nostrud exercitation
+                                            ullam
+                                        </p>
+                                        <p>Duis aute irure dolor in reprehend it in voluptate velit cillum.dolore eu
+                                            fugiat
+                                            nulla.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End column -->
+
+                        <!--Footer Column-->
+                        <div class="footer-column col-lg-3 col-md-6 col-xs-12">
+                            <div class="footer-widget twitter-widget">
+                                <h4 class="widget-title">Twitter Feeds</h4>
+                                <div class="widget-content">
+                                    <article class="post">
+                                        <div class="top-info">
+                                            <span class="icon fab fa-twitter"></span>
+                                            <div class="info">
+                                                <div class="author">Kirstin Hagel</div>
+                                                <div class="author-meta">@KirstinHagel . 7 Dec</div>
+
+                                            </div>
+                                        </div>
+                                        <div class="text">Excepteur sint occaecat cupidatat proent. <a
+                                                href="#">https://T.Co/Sr45bvMJU6</a></div>
+                                    </article>
+
+                                    <article class="post">
+                                        <div class="top-info">
+                                            <span class="icon fab fa-twitter"></span>
+                                            <div class="info">
+                                                <div class="author">Kirstin Hagel</div>
+                                                <div class="author-meta">@KirstinHagel . 7 Dec</div>
+                                            </div>
+                                        </div>
+                                        <div class="text">Excepteur sint occaecat cupidatat proent. <a
+                                                href="#">https://T.Co/Sr45bvMJU6</a></div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer Bottom -->
         <div class="footer-bottom">
@@ -333,6 +467,11 @@
             </div>
         </div>
     </footer>
+
+    <button class="scroll-top">
+        <span class="fa fa-angle-up"></span>
+    </button>
+
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="img01">
@@ -343,6 +482,7 @@
     <script src="./assets/js/imgModal.js"></script>
     <script src="./assets/js/addProduct.js"></script>
     <script src="./assets/js/des-rewButtons.js"></script>
+    <script src="./assets/js/scroll-top.js"></script>
 </body>
 
 </html>
