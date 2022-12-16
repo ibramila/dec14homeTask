@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   border: none;
   outline: none;
@@ -857,6 +858,28 @@ body {
 }
 .third-section .row .description-content .tab-pane .comment-form .row .sec1 {
   margin-bottom: 15px;
+  /*create the star*/
+  /*remove the default style (italic) of the star*/
+  /*set color on hover*/
+}
+.third-section .row .description-content .tab-pane .comment-form .row .sec1 .star-rating {
+  color: #bebebe;
+  font-size: 2em;
+}
+.third-section .row .description-content .tab-pane .comment-form .row .sec1 .star-rating li {
+  display: inline;
+}
+.third-section .row .description-content .tab-pane .comment-form .row .sec1 .my-star::before {
+  content: "★";
+}
+.third-section .row .description-content .tab-pane .comment-form .row .sec1 .my-star {
+  font-style: unset !important;
+}
+.third-section .row .description-content .tab-pane .comment-form .row .sec1 .my-star.is-active {
+  color: #fb8900;
+}
+.third-section .row .description-content .tab-pane .comment-form .row .sec1 .my-star:not(.is-active):hover {
+  color: #fb8900;
 }
 .third-section .row .description-content .tab-pane .comment-form .row label {
   color: #222222;
