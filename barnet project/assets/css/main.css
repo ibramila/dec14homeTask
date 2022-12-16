@@ -531,6 +531,16 @@ footer .footer-bottom .row .right_side ul li:nth-child(2) {
   background: #ff4747;
   -webkit-animation: pulse 2s infinite;
   animation: pulse 2s infinite;
+  -webkit-animation-name: animation;
+          animation-name: animation;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 .scroll-top:after {
   position: absolute;
@@ -544,6 +554,27 @@ footer .footer-bottom .row .right_side ul li:nth-child(2) {
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
 }
 
+@-webkit-keyframes animation {
+  0% {
+    width: 55px;
+    height: 55px;
+  }
+  100% {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@keyframes animation {
+  0% {
+    width: 55px;
+    height: 55px;
+  }
+  100% {
+    width: 60px;
+    height: 60px;
+  }
+}
 @media only screen and (max-width: 576px) {
   footer .footer-bottom .row {
     flex-direction: column;
@@ -934,6 +965,53 @@ body {
 }
 .third-section .row .description-content .active {
   display: block;
+}
+
+.forth-section .main-title {
+  display: flex;
+  justify-content: space-between;
+}
+.forth-section .main-title h1 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 50px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: #1a224c;
+}
+.forth-section .main-title .btn-prev-next .prev-btn {
+  font-weight: 900;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  line-height: 46px;
+  border: 1px solid #f0f0f0;
+  text-align: center;
+  font-size: 24px;
+  color: #949494;
+  border-radius: 50%;
+  transition: all 300ms ease;
+}
+.forth-section .main-title .btn-prev-next .prev-btn:hover, .forth-section .main-title .btn-prev-next .prev-btn:focus {
+  border-color: #ff4747;
+  color: #ff4747;
+}
+.forth-section .main-title .btn-prev-next .next-btn {
+  font-weight: 900;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  line-height: 46px;
+  border: 1px solid #f0f0f0;
+  text-align: center;
+  font-size: 24px;
+  color: #949494;
+  border-radius: 50%;
+  transition: all 300ms ease;
+}
+.forth-section .main-title .btn-prev-next .next-btn:hover, .forth-section .main-title .btn-prev-next .next-btn:focus {
+  border-color: #ff4747;
+  color: #ff4747;
 }
 
 .fifth-section .container {
